@@ -38,7 +38,6 @@ module "vpc" {
   tags = "${merge(
     var.default_tags, 
     map(
-      "Name", "${local.vpc_name}",
       "Environment", format("%s", terraform.workspace)
       )
     )
