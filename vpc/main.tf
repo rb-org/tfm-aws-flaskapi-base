@@ -30,9 +30,6 @@ module "vpc" {
     Name = "${local.name_prefix}-dhcp"
   }
 
-  # RDS
-  create_database_subnet_group = true
-
   # Tags
 
   tags = "${merge(
