@@ -8,6 +8,14 @@ module "iam" {
   source = "./iam"
 }
 
+module "sgs" {
+  source = "./sgs"
+
+  vpc_id       = "${module.vpc.vpc_id}"
+  default_tags = "${var.default_tags}"
+  sg_ssh_id    = "${module.ec2_ssh.sg_id}"
+}
+
 module "ec2_ssh" {
   source = "./ec2_ssh"
 

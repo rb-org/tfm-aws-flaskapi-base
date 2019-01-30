@@ -1,6 +1,6 @@
 resource "aws_security_group" "sg_tux" {
   name        = "${local.sg_tux_name}"
-  description = "Applied to all Linux instances to provide SSH access"
+  description = "Applied to all Linux instances"
   vpc_id      = "${var.vpc_id}"
 
   tags = "${merge(var.default_tags, map(
@@ -18,8 +18,8 @@ resource "aws_security_group_rule" "ir_base_tux_ssh_t" {
   to_port                  = 22
   protocol                 = "tcp"
   source_security_group_id = "${var.sg_ssh_id}"
-  description              = "SSH"
-  security_group_id        = "${var.sg_tux_id}"
+  description              = "Allow SSH from bastion"
+  security_group_id        = "${aws_security_group.sg_tux.id}"
 }
 
 #########
