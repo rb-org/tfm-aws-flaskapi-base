@@ -88,3 +88,6 @@ variable "enable_chef" {
 variable "ebs_optimized" {
   type = "map"
 }
+
+# Security Groups
+variable "db_clients_sg_id" {}

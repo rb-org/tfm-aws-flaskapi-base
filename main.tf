@@ -33,6 +33,9 @@ module "ec2_ssh" {
   disable_api_term      = "${var.disable_api_term}"
   ebs_optimized         = "${var.ebs_optimized}"
 
+  # Security Groups
+  db_clients_sg_id = "${module.sgs.db_clients_sg_id}"
+
   # Tags
   default_tags   = "${var.default_tags}"
   enable_backups = "${var.enable_backups}"

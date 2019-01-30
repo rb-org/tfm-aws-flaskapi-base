@@ -13,7 +13,7 @@ module "instance" {
   user_data               = "./files/userdata_ubu.sh"
   use_prv_ip              = false
   public_ip               = true
-  security_group_ids      = ["${aws_security_group.sg_ssh.id}"]
+  security_group_ids      = ["${aws_security_group.sg_ssh.id}", "${var.db_clients_sg_id}"]
   enable_monitoring       = "${var.enable_monitoring[var.app_id]}"
   ebs_optimized           = "${var.ebs_optimized[var.app_id]}"
   disable_api_termination = "${var.disable_api_term[var.app_id]}"
