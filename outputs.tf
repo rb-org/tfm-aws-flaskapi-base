@@ -29,3 +29,16 @@ output "public_subnets_cidr_blocks" {
 output "vpc_id" {
   value = "${module.vpc.vpc_id}"
 }
+
+output "ssh_sg_id" {
+  value = "${module.ec2_ssh.sg_id}"
+}
+
+output "tux_sg_id" {
+  value = "${module.sgs.tux_sg_id}"
+}
+
+# variable "db_clients_sg_id" {
+#   value = "${module.sgs.db_clients_sg_id}"
+# }
+
