@@ -38,7 +38,6 @@ output "tux_sg_id" {
   value = "${module.sgs.tux_sg_id}"
 }
 
-# variable "db_clients_sg_id" {
-#   value = "${module.sgs.db_clients_sg_id}"
-# }
-
+output "db_clients_sg_id" {
+  value = "${module.sgs.db_clients_sg_id}"
+}
