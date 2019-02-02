@@ -41,3 +41,8 @@ output "tux_sg_id" {
 output "db_clients_sg_id" {
   value = "${module.sgs.db_clients_sg_id}"
 }
+
+# ACM Certs
+output "wildcard_cert_arn" {
+  value = "${module.acm.wildcard_cert_arn}"
+}

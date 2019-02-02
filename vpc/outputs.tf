@@ -3,7 +3,7 @@ output "database_subnet_group" {
 }
 
 output "database_subnets_ids" {
-  value = "${module.vpc.database_subnets}"
+  value = ["${module.vpc.database_subnets}"]
 }
 
 output "nat_public_ips" {
