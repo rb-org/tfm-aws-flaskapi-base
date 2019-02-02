@@ -56,6 +56,10 @@ output "tux_sg_id" {
   value = "${module.sgs.tux_sg_id}"
 }
 
+output "flaskapi_sg_id" {
+  value = "${module.sgs.flaskapi_sg_id}"
+}
+
 # S3
 output "s3_lb_logs_id" {
   description = "The name of the bucket"
