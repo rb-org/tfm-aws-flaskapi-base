@@ -55,3 +55,19 @@ output "ssh_sg_id" {
 output "tux_sg_id" {
   value = "${module.sgs.tux_sg_id}"
 }
+
+# S3
+output "s3_lb_logs_id" {
+  description = "The name of the bucket"
+  value       = "${aws_s3_bucket.s3.s3_lb_logs_id}"
+}
+
+output "ssm_docs_bucket_id" {
+  description = "The name of the ssm docs bucket"
+  value       = "${aws_s3_bucket.s3.ssm_docs_bucket_id}"
+}
+
+output "ssm_patch_bucket_id" {
+  description = "The name of the bucket"
+  value       = "${aws_s3_bucket.s3.ssm_bucket_id}"
+}
