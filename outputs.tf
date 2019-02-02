@@ -30,14 +30,6 @@ output "vpc_id" {
   value = "${module.vpc.vpc_id}"
 }
 
-output "ssh_sg_id" {
-  value = "${module.ec2_ssh.sg_id}"
-}
-
-output "tux_sg_id" {
-  value = "${module.sgs.tux_sg_id}"
-}
-
 output "db_clients_sg_id" {
   value = "${module.sgs.db_clients_sg_id}"
 }
@@ -45,4 +37,21 @@ output "db_clients_sg_id" {
 # ACM Certs
 output "wildcard_cert_arn" {
   value = "${module.acm.wildcard_cert_arn}"
+}
+
+# Security Groups
+output "r53_hcs_sg_id" {
+  value = "${module.sgs.r53_hcs_sg_id}"
+}
+
+output "alb_sg_id" {
+  value = "${module.sgs.alb_sg_id}"
+}
+
+output "ssh_sg_id" {
+  value = "${module.ec2_ssh.sg_id}"
+}
+
+output "tux_sg_id" {
+  value = "${module.sgs.tux_sg_id}"
 }
