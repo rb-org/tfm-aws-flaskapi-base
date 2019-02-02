@@ -13,3 +13,7 @@ output "r53_hcs_sg_id" {
 output "alb_sg_id" {
   value = "${aws_security_group.sg_alb.id}"
 }
+
+output "flaskapi_sg_id" {
+  value = "${aws_security_group.sg_flaskapi.id}"
+}
