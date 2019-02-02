@@ -25,3 +25,5 @@ data "aws_ami" "ubuntu_linux" {
 
   owners = ["099720109477"]
 }
+
+data "aws_region" "current" {}

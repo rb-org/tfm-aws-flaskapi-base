@@ -8,6 +8,13 @@ module "iam" {
   source = "./iam"
 }
 
+module "s3" {
+  source = "./s3"
+
+  region       = "${data.aws_region.current.name}"
+  default_tags = "${var.default_tags}"
+}
+
 module "sgs" {
   source = "./sgs"
 
