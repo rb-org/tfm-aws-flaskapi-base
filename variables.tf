@@ -18,6 +18,10 @@ variable "default_tags" {
   }
 }
 
+variable "r53_dns_domain_pub" {
+  default = "xyzexcp.nl"
+}
+
 # EC2
 variable "instance_type" {
   type = "map"

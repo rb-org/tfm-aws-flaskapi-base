@@ -16,6 +16,13 @@ module "sgs" {
   sg_ssh_id    = "${module.ec2_ssh.sg_id}"
 }
 
+module "acm" {
+  source = "./acm"
+
+  default_tags       = "${var.default_tags}"
+  r53_dns_domain_pub = "${var.r53_dns_domain_pub}"
+}
+
 module "ec2_ssh" {
   source = "./ec2_ssh"
 
