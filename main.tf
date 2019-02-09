@@ -24,6 +24,16 @@ module "sgs" {
   r53_health_check_ranges = "${data.aws_ip_ranges.route_53_health_checks.cidr_blocks}"
 }
 
+module "sns" {
+  source = "./sns"
+
+  sns_email             = "${var.sns_email}"
+  sns_slack_webhook     = "${var.sns_slack_webhook}"
+  victorops_routing_key = "${var.victorops_routing_key}"
+  victorops_webhook     = "${var.victorops_webhook}"
+  default_tags          = "${var.default_tags}"
+}
+
 module "acm" {
   source = "./acm"
 
