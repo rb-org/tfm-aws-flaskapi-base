@@ -27,11 +27,7 @@ module "sgs" {
 module "sns" {
   source = "./sns"
 
-  sns_email             = "${var.sns_email}"
-  sns_slack_webhook     = "${var.sns_slack_webhook}"
-  victorops_routing_key = "${var.victorops_routing_key}"
-  victorops_webhook     = "${var.victorops_webhook}"
-  default_tags          = "${var.default_tags}"
+  default_tags = "${var.default_tags}"
 }
 
 module "acm" {

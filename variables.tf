@@ -119,3 +119,14 @@ variable "ebs_optimized" {
     ssh = "false"
   }
 }
+
+# # SNS
+# variable "sns_slack_webhook" {}
+
+
+# variable "sns_email" {}
+
+
+# variable "victorops_routing_key" {}
+# variable "victorops_webhook" {}
+
