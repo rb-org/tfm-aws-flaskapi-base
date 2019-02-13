@@ -1,7 +1,7 @@
 module "instance" {
-  #source = "../../mods/tfm-aws-mod-ec2-default"
+  # source = "../../mods/tfm-aws-mod-ec2-default"
 
-  source = "github.com/rb-org/tfm-aws-mod-ec2-default?ref=v0.0.1"
+  source = "github.com/rb-org/tfm-aws-mod-ec2-default?ref=v0.0.2"
 
   instance_count          = "${var.instance_count[var.app_id]}"
   instance_name           = "${local.instance_name}"
@@ -31,7 +31,7 @@ module "instance" {
   disk_metric_name         = "disk_used_percent"
   disk_threshold           = "75"
   disk_unit                = "Percent"
-  diskspace_disks          = ["xvda1"]
+  diskspace_disks          = ["nvme0n1p1"]
   path                     = ["/"]
 
   ## Tags

@@ -8,7 +8,8 @@ module "sns_slack" {
   victorops_webhook     = "${data.aws_ssm_parameter.victorops_webhook.value}"
   default_tags          = "${var.default_tags}"
 
-  # create_all            = true
-  # create_sns_topic      = true
+  create_all       = true
+  create_sns_topic = true
+
   # use_source_hash       = false
 }

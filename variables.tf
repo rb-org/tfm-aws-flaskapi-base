@@ -48,7 +48,7 @@ variable "enable_cw_metrics" {
   type = "map"
 
   default = {
-    ssh = false
+    ssh = true
   }
 }
 
@@ -56,7 +56,7 @@ variable "enable_monitoring" {
   type = "map"
 
   default = {
-    ssh = false
+    ssh = true
   }
 }
 
@@ -65,7 +65,7 @@ variable "enable_cw_alarm_cpu" {
   type        = "map"
 
   default = {
-    ssh = false
+    ssh = true
   }
 }
 
@@ -74,7 +74,7 @@ variable "enable_cw_alarm_disk_tux" {
   type        = "map"
 
   default = {
-    ssh = false
+    ssh = true
   }
 }
 
